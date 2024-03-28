@@ -18,5 +18,8 @@ default = []
 [dependencies]
 anchor-lang = "0.27.0"
 anchor-spl = "0.27.0"
-drift = { git = "https://github.com/drift-labs/protocol-v2.git", version = "2.74.0" }
+bytemuck = { version = "1.4.0", features = ["derive", "min_const_generics"]}
+drift = { git = "https://github.com/drift-labs/protocol-v2.git", version = "2.74.0", features = ["cpi", "no-entrypoint"] }
 fixed = "=1.23.1"
+solana-program = "=1.14.16"
+borsh = "0.9.1"

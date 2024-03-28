@@ -1,15 +1,29 @@
 use anchor_lang::prelude::*;
+use instructions::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("6tTgCX22MLxWBDf4h6yPNEqnshhJDfwetqBdLAfcp2Xi");
 
 #[program]
 pub mod drift_adaptor {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        Ok(())
+    pub fn initialize_token(
+        ctx: Context<InitializeToken>,
+        params: InitializeTokenParams,
+    ) -> Result<()> {
+        instructions::initialize_token(ctx, params)
+    }
+
+    pub fn initialize_vault<'info>(
+        ctx: Context<'_, '_, '_, 'info, InitializeVault<'info>>,
+        params: InitializeVaultParams,
+    ) -> Result<()> {
+        instructions::initialize_vault(ctx, params)
     }
 }
 
-#[derive(Accounts)]
-pub struct Initialize {}
+mod cpi;
+mod error;
+mod instructions;
+mod macros;
+mod states;
