@@ -17,3 +17,6 @@ default = []
 
 [dependencies]
 anchor-lang = "0.27.0"
+anchor-spl = "0.27.0"
+drift = { git = "https://github.com/drift-labs/protocol-v2.git", version = "2.74.0" }
+fixed = "=1.23.1"

@@ -2,7 +2,7 @@
 seeds = false
 skip-lint = false
 [programs.localnet]
-drift_adaptor = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+drift_adaptor = "6tTgCX22MLxWBDf4h6yPNEqnshhJDfwetqBdLAfcp2Xi"
 
 [registry]
 url = "https://api.apr.dev"
